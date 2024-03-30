@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dice</title>
+    <style>
+        .gg{
+            margin: auto;
+            width: 50%;
+            border: 1px ;
+            padding: 10px;
+            padding-bottom: 30%;
+        }
+        .xt{
+            color: aqua;
+        }
+        .but{
+            background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+        }
+    </style>
+</head>
+<body bgcolor="purple">
+    <center><h1 class="xt">Random Dice Roller</h1></center>
+    <div class="gg">
+       
+        <center><img id="diceImage" src="" width="250" height="250"></center>
+        <center><button class="but" onclick="rollDice()">Roll the Dice</button></center>
+
+        <script>
+            var diceImages = ["images/dice-six-faces-five.png","images/dice-six-faces-two.png","images/dice-six-faces-three.png","images/dice-six-faces-four.png","images/dice-six-faces-six.png","images/dice-six-faces-one.png"];
+
+            function rollDice() {
+                var result = Math.floor(Math.random() * 6);
+                document.getElementById('diceImage').src = diceImages[result];
+            }
+        </script>
+    </div>    
+</body>
+</html>
